@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARES — Carteras y algo más</title>
+<meta name="description" content="Ares: carteras y accesorios de diseño uruguayo. Piezas únicas, envíos a todo el país.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{--bordo:#6e1d12;--bordo-osc:#4a120b;--crema:#f3ead8;--tinta:#1b1512;--gris:#6f655c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Archivo,Arial,sans-serif;background:var(--crema);color:var(--tinta);line-height:1.5}
+a{color:inherit;text-decoration:none}
+.ancho{max-width:1120px;margin:0 auto;padding:0 22px}
+.titulo{font-stretch:125%;font-weight:900;text-transform:uppercase;line-height:.95;letter-spacing:-.01em}
+nav{position:sticky;top:0;z-index:10;background:var(--crema);border-bottom:1.5px solid var(--tinta)}
+nav .ancho{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{width:50px;height:50px;border-radius:50%;background:var(--bordo);color:var(--crema);display:flex;align-items:center;justify-content:center;font-stretch:125%;font-weight:900;font-size:12px;letter-spacing:.04em}
+nav ul{display:flex;gap:26px;list-style:none;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+.btn{display:inline-block;background:var(--bordo);color:var(--crema);font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:14px;padding:14px 26px;border-radius:999px}
+.btn.claro{background:var(--crema);color:var(--bordo)}
+.hero{background:var(--bordo);color:var(--crema)}
+.hero .ancho{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;padding-top:64px;padding-bottom:64px}
+.hero h1{font-size:clamp(40px,7.2vw,92px)}
+.hero p{margin:22px 0 30px;font-size:19px;max-width:30em;opacity:.92}
+.foto{background:linear-gradient(160deg,#c9b89a,#a58f6e);border-radius:6px;display:flex;align-items:flex-end;justify-content:flex-start;padding:14px;color:#3d3226;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background-size:cover;background-position:center;overflow:hidden}
+.hero .foto{aspect-ratio:4/5;border:1.5px solid var(--crema)}
+.cinta{background:var(--tinta);color:var(--crema);overflow:hidden;white-space:nowrap}
+.cinta div{display:inline-block;padding:13px 0;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:14px;letter-spacing:.1em;animation:correr 26s linear infinite}
+.cinta span{margin:0 26px}
+@keyframes correr{to{transform:translateX(-50%)}}
+section{padding:76px 0}
+h2{font-size:clamp(30px,4.6vw,56px);margin-bottom:10px}
+.bajada{color:var(--gris);font-size:18px;max-width:38em;margin-bottom:34px}
+.grilla{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grilla .foto{aspect-ratio:3/4}
+.pieza small{display:block;margin-top:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+.pieza span{color:var(--gris);font-size:14px}
+.sobre{background:var(--tinta);color:var(--crema)}
+.sobre .ancho{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.sobre .foto{aspect-ratio:1/1}
+.sobre p{font-size:19px;opacity:.9;margin-top:16px}
+.datos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+.datos div{border:1.5px solid rgba(243,234,216,.35);border-radius:6px;padding:14px 16px;font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.06em}
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.paso{border:1.5px solid var(--tinta);border-radius:6px;padding:26px 22px;background:#fbf6ea}
+.paso b{display:block;font-stretch:125%;font-weight:900;font-size:44px;color:var(--bordo);line-height:1}
+.paso h3{margin:14px 0 6px;font-size:20px;text-transform:uppercase;font-stretch:112%}
+.paso p{color:var(--gris)}
+.cierre{background:var(--bordo);color:var(--crema);text-align:center}
+.cierre h2{margin-bottom:22px}
+footer{background:var(--bordo-osc);color:var(--crema);text-align:center;padding:26px 0;font-size:14px}
+.logo{overflow:hidden;padding:0}.logo img{width:100%;height:100%;object-fit:cover}
+.foto{padding:0}.foto img{width:100%;height:100%;object-fit:cover;display:block}
+a.pieza{display:block}.pieza .foto{transition:transform .25s}.pieza:hover .foto{transform:translateY(-4px)}
+.pieza b.precio{display:block;font-stretch:112%;font-weight:900;font-size:20px;color:var(--bordo);margin:2px 0}
+.pieza b.consulta{font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+.lentes{background:#e9dcc3;padding:56px 0}.lentes .ancho{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.lentes p{color:#4d443c;font-size:18px;max-width:34em;margin-top:8px}
+.pagos{margin-top:22px;border:1.5px solid var(--tinta);border-radius:6px;padding:24px 22px;background:var(--bordo);color:var(--crema)}
+.pagos h3{font-size:24px;margin-bottom:6px}
+.grilla .foto,.hero .foto{background:#fff;border:1.5px solid #e2d6bd}.grilla .foto{aspect-ratio:1/1}.hero .foto{aspect-ratio:1/1}
+.grilla .foto img,.hero .foto img{object-fit:contain}
+@media (max-width:820px){
+ nav ul{display:none}
+ .hero .ancho,.sobre .ancho{grid-template-columns:1fr}
+ .grilla{grid-template-columns:repeat(2,1fr)}
+ .pasos{grid-template-columns:1fr}
+ section{padding:54px 0}
+}
+</style>
+</head>
+<body>
+<nav><div class="ancho">
+  <a href="#" class="logo" aria-label="Ares"><img src="fotos/logo.jpg" alt="Ares"></a>
+  <ul><li><a href="#coleccion">Colección</a></li><li><a href="#sobre">Sobre Ares</a></li><li><a href="#accesorios">Accesorios</a></li><li><a href="#pedir">Cómo pedir</a></li></ul>
+  <a class="btn" href="https://ig.me/m/aress__studio" target="_blank" rel="noopener">Pedir por DM</a>
+</div></nav>
+
+<header class="hero"><div class="ancho">
+  <div>
+    <h1 class="titulo">Elegí lo que te haga sentir imparable</h1>
+    <p>Carteras y algo más ;) Diseño uruguayo. Cada pieza es única.</p>
+    <a class="btn claro" href="#coleccion">Ver la colección</a>
+  </div>
+  <div class="foto"><img src="fotos/blanco-azul.jpg" alt="Cartera Ares azul"></div>
+</div></header>
+
+<div class="cinta"><div>
+  <span>Diseñado y hecho en Uruguay</span>★<span>Piezas únicas</span>★<span>Envíos a todo el país</span>★
+  <span>Diseñado y hecho en Uruguay</span>★<span>Piezas únicas</span>★<span>Envíos a todo el país</span>★
+</div></div>
+
+<section id="coleccion"><div class="ancho">
+  <h2 class="titulo">Colección</h2>
+  <p class="bajada">Carteras amplias, de las que entra todo. Tocá la que te guste y reservala por mensaje.</p>
+  <div class="grilla">
+    <a class="pieza" href="https://ig.me/m/aress__studio" target="_blank" rel="noopener"><div class="foto"><img src="fotos/blanco-nala.jpg" alt="Cartera Nala" loading="lazy"></div><small>Cartera Nala</small><b class="precio">$ 850</b><span>Simple, cómoda y fácil de combinar.</span></a>
+    <a class="pieza" href="https://ig.me/m/aress__studio" target="_blank" rel="noopener"><div class="foto"><img src="fotos/blanco-iconica.jpg" alt="Icónica" loading="lazy"></div><small>Icónica</small><b class="precio">$ 699</b><span>La de las estrellas. Potencia tu estilo.</span></a>
+    <a class="pieza" href="https://ig.me/m/aress__studio" target="_blank" rel="noopener"><div class="foto"><img src="fotos/blanco-hobo.jpg" alt="Bolso Hobo" loading="lazy"></div><small>Bolso Hobo</small><b class="precio">$ 590</b><span>Simple, práctico y con mucho carácter.</span></a>
+    <a class="pieza" href="https://ig.me/m/aress__studio" target="_blank" rel="noopener"><div class="foto"><img src="fotos/blanco-sky.jpg" alt="Sky" loading="lazy"></div><small>Sky</small><b class="precio consulta">Consultá precio</b><span>Delicado, versátil y para todos los días.</span></a>
+    <a class="pieza" href="https://ig.me/m/aress__studio" target="_blank" rel="noopener"><div class="foto"><img src="fotos/blanco-azul.jpg" alt="Oversized azul" loading="lazy"></div><small>Oversized azul</small><b class="precio consulta">Consultá precio</b><span>El azul que no pasa desapercibido.</span></a>
+    <a class="pieza" href="https://ig.me/m/aress__studio" target="_blank" rel="noopener"><div class="foto"><img src="fotos/blanco-simple.jpg" alt="Simple e icónica" loading="lazy"></div><small>Simple e icónica</small><b class="precio consulta">Consultá precio</b><span>Es esa que habla por vos.</span></a>
+    <a class="pieza" href="https://ig.me/m/aress__studio" target="_blank" rel="noopener"><div class="foto"><img src="fotos/blanco-reel.jpg" alt="Bordó" loading="lazy"></div><small>Bordó</small><b class="precio consulta">Consultá precio</b><span>De las que entra todo.</span></a>
+  </div>
+</div></section>
+
+<section class="sobre" id="sobre"><div class="ancho">
+  <div class="foto"><img src="fotos/detalles.jpg" alt="Carteras Ares, piezas únicas"></div>
+  <div>
+    <h2 class="titulo">Sobre Ares</h2>
+    <p>Los detalles sí importan. Cada bolso es único, y eso es parte de lo exclusivo.</p><p>Si sos de las que mete todo en la cartera, encontraste tu lugar.</p>
+    <div class="datos"><div>Hecho en Uruguay</div><div>Piezas únicas</div><div>Carteras y accesorios</div><div>Envíos a todo el país</div></div>
+  </div>
+</div></section>
+
+<section class="lentes" id="accesorios"><div class="ancho">
+  <div><h2 class="titulo">Accesorios</h2><p>Además de carteras, en Ares hay accesorios. Pedinos por mensaje los modelos disponibles y te mandamos fotos y precios.</p></div>
+  <a class="btn" href="https://ig.me/m/aress__studio" target="_blank" rel="noopener">Ver accesorios por DM</a>
+</div></section>
+
+<section id="pedir"><div class="ancho">
+  <h2 class="titulo">Cómo pedir</h2>
+  <p class="bajada">Los pedidos se hacen por mensaje directo de Instagram.</p>
+  <div class="pasos">
+    <div class="paso"><b>1</b><h3>Elegí tu pieza</h3><p>Mirá la colección acá o en Instagram.</p></div>
+    <div class="paso"><b>2</b><h3>Escribinos por DM</h3><p>Contanos cuál te gustó y te confirmamos si está disponible.</p></div>
+    <div class="paso"><b>3</b><h3>Pago y envío</h3><p>Coordinamos el pago y te la enviamos a cualquier punto del país.</p></div>
+  </div>
+  <div class="pagos"><h3 class="titulo">Métodos de pago</h3><p>Te pasamos los medios de pago disponibles por mensaje al confirmar tu pedido.</p></div>
+</div></section>
+
+<section class="cierre"><div class="ancho">
+  <h2 class="titulo">¿Te gustó alguna?</h2>
+  <a class="btn claro" href="https://ig.me/m/aress__studio" target="_blank" rel="noopener">Escribinos por Instagram</a>
+</div></section>
+
+<footer><div class="ancho">ARES · Carteras y algo más ;) · <a href="https://www.instagram.com/aress__studio/" target="_blank" rel="noopener">@aress__studio</a> · Uruguay</div></footer>
+</body>
+</html>
